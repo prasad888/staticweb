@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: static-service
+  namespace: static
+spec:
+  selector:
+    app: static-deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
